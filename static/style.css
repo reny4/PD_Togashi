@@ -389,3 +389,17 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 .spot-comment-bubble:hover:not(:disabled) { background: var(--panel-hover); border-color: var(--gold); }
 .spot-comment-bubble:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 .spot-comment-more { align-self: flex-end; color: var(--gold); font-size: 14px; letter-spacing: 0.05em; }
+
+/* スポットのモーダルの説明・見どころ・営業時間（spots.json の既存項目） */
+.spot-desc { margin: 0 0 12px; line-height: 1.8; }
+.spot-highlights { margin: 0 0 14px; padding-left: 1.2em; color: var(--text); }
+.spot-highlights li { margin: 2px 0; }
+.spot-highlights li::marker { color: var(--gold); }
+.spot-info {
+  display: grid; grid-template-columns: auto 1fr; gap: 6px 14px;
+  margin: 0; padding-top: 12px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+}
+.spot-info dt { color: var(--gold); white-space: nowrap; }
+.spot-info dd { margin: 0; color: var(--text); }

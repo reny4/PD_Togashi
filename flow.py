@@ -52,6 +52,8 @@ def card(spot: dict) -> dict:
         "highlights": spot.get("highlights", [])[:3], "map_url": spot.get("map_url", ""),
         "detail_choice_id": f"detail_{spot['id']}",
         "comment": SPOT_COMMENTS.get(spot["id"], ""),
+        # モーダル用（spots.json の既存項目をそのまま渡す。「なし」の出し分けは画面側）
+        "area": spot.get("area", ""), "hours": spot.get("hours", ""), "closed_days": spot.get("closed_days", ""),
     }
 
 

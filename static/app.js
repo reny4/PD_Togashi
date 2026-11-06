@@ -356,7 +356,7 @@ function buildSurvey() {
 }
 
 // ---------- スポットの詳しい説明（モーダル） ----------
-// いまは名前だけ入れる。説明と写真は spots.json に項目が決まったらここで入れる
+// spots.json の既存項目（flow.card() が渡す）を出すだけ。AIは呼ばない（残り回数も減らない）。写真は Step 2 で入れる
 let modalSpot = null; // いまモーダルで開いているスポット（「もっと聞く」で使う）
 
 function openSpotModal(spot) {
@@ -364,6 +364,31 @@ function openSpotModal(spot) {
   $("spot-modal-title").textContent = spot.name;
   $("spot-modal-comment-text").textContent = spot.comment || "";
   $("spot-modal-comment").hidden = !spot.comment; // ひと言がまだないスポットでは出さない
+
+  $("spot-modal-desc").textContent = spot.description || "";
+  $("spot-modal-desc").hidden = !spot.description;
+
+  const list = $("spot-modal-highlights");
+  list.replaceChildren(...(spot.highlights || []).map((h) => {
+    const li = document.createElement("li");
+    li.textContent = h;
+    return li;
+  }));
+  list.hidden = list.children.length === 0;
+
+  // 「なし」や空の項目は行ごと出さない（公園・史跡は営業時間・休みとも「なし」）
+  const info = $("spot-modal-info");
+  info.replaceChildren();
+  [["エリア", spot.area], ["営業時間", spot.hours], ["休み", spot.closed_days]].forEach(([label, value]) => {
+    if (!value || value === "なし") return;
+    const dt = document.createElement("dt");
+    dt.textContent = label;
+    const dd = document.createElement("dd");
+    dd.textContent = value;
+    info.append(dt, dd);
+  });
+  info.hidden = info.children.length === 0;
+  $("spot-modal-body").scrollTop = 0;
   $("spot-modal").hidden = false;
 }
 
