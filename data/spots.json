@@ -1,0 +1,303 @@
+[
+  {
+    "id": "spot_001",
+    "name": "末松廃寺跡",
+    "area": "野々市駅周辺",
+    "category": "park",
+    "tags": [
+      "歴史",
+      "散策",
+      "落ち着く",
+      "学び"
+    ],
+    "short_description": "北陸最古級の古代寺院跡を整備した史跡公園",
+    "safe_reason_to_recommend": "静かに歴史を感じながら散策できる場所である",
+    "card_description": "白鳳時代に建立された北陸最古級の古代寺院跡。国指定史跡として整備された公園で、当時の礎石が残る。歴史的価値が高く、静かに散策しながら歴史を感じるのに適している。",
+    "highlights": [
+      "北陸最古級の寺院跡",
+      "国指定史跡",
+      "歴史散策に最適"
+    ],
+    "kind": "歴史",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E6%9C%AB%E6%9D%BE%E5%BB%83%E5%AF%BA%E8%B7%A1%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "なし",
+    "closed_days": "なし",
+    "sources": [
+      "https://www.city.nonoichi.lg.jp/soshiki/31/13499.html",
+      "https://www.city.nonoichi.lg.jp/soshiki/37/1760.html"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "開園時間はなし（renya決定）。住所 末松2丁目247、駐車場約20台"
+  },
+  {
+    "id": "spot_002",
+    "name": "野々市市文化会館フォルテ",
+    "area": "市役所周辺",
+    "category": "facility",
+    "tags": [
+      "文化",
+      "芸術",
+      "落ち着く",
+      "学び"
+    ],
+    "short_description": "市民の芸術文化活動の中心となる文化会館",
+    "safe_reason_to_recommend": "芸術や文化に触れながらゆったり過ごせる場所である",
+    "card_description": "市民の芸術文化活動と教養向上の中心拠点となる文化会館。優れた音響設計の大ホールや、本格的な和室・茶室を備えている。広々としたホワイエがあり、イベント前後もゆったりと過ごせる。",
+    "highlights": [
+      "804席の大ホール",
+      "優れた音響設計",
+      "本格的な和室や茶室を完備"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%87%8E%E3%80%85%E5%B8%82%E5%B8%82%E6%96%87%E5%8C%96%E4%BC%9A%E9%A4%A8%E3%83%95%E3%82%A9%E3%83%AB%E3%83%86%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "9:00-22:00（受付 9:00-17:00、閉館時間は利用状況で変わる）",
+    "closed_days": "第1・第3水曜（祝日なら翌日）",
+    "sources": [
+      "https://iko-yo.net/facilities/146356",
+      "https://zaseki.music-mdata.com/detail/16833/1"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "categoryをshop→facilityに変更（renya決定）。公式サイト forte.nono1.jp は自動取得できず、時間は施設紹介サイトの情報"
+  },
+  {
+    "id": "spot_003",
+    "name": "御経塚遺跡公園",
+    "area": "野々市駅周辺",
+    "category": "park",
+    "tags": [
+      "歴史",
+      "散策",
+      "学び",
+      "自然"
+    ],
+    "short_description": "縄文時代の大集落跡を保存する史跡公園",
+    "safe_reason_to_recommend": "自然の中で縄文時代の暮らしを体感できる場所である",
+    "card_description": "縄文時代後期から晩期の大集落跡を保存する国指定史跡公園。復元された竪穴住居があり、縄文時代の暮らしを体感できる。隣接する歴史館では出土品を展示し、歴史学習の場としても優れている。",
+    "highlights": [
+      "縄文時代の大集落跡",
+      "竪穴住居を復元",
+      "自然豊かな遊歩道"
+    ],
+    "kind": "歴史",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%BE%A1%E7%B5%8C%E5%A1%9A%E9%81%BA%E8%B7%A1%E5%85%AC%E5%9C%92%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "なし",
+    "closed_days": "なし",
+    "sources": [
+      "https://www.city.nonoichi.lg.jp/soshiki/37/2608.html"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "開園時間はなし（renya決定）。隣接のふるさと歴史館は10:00-16:00・入館無料、休館は月曜（祝日なら翌日）・祝日の翌日（土日除く）・年末年始"
+  },
+  {
+    "id": "spot_004",
+    "name": "富樫氏城館跡",
+    "area": "工大周辺",
+    "category": "park",
+    "tags": [
+      "歴史",
+      "散策",
+      "富樫"
+    ],
+    "short_description": "加賀守護富樫氏の館跡を伝える史跡",
+    "safe_reason_to_recommend": "野々市と富樫氏の歴史を深く感じられる場所である",
+    "card_description": "中世に加賀の守護大名として栄えた富樫氏の館跡で、当時の加賀国の政治・経済・文化の中心地だった。現在は館跡を示す石碑が残り、発掘調査では堀の一部や和鏡が見つかっている。野々市市の歴史を深く知るための重要な史跡である。",
+    "highlights": [
+      "加賀守護富樫氏の館跡",
+      "野々市工大前駅のすぐ横",
+      "歴史の転換点を感じる場所"
+    ],
+    "kind": "歴史",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%AF%8C%E6%A8%AB%E6%B0%8F%E5%9F%8E%E9%A4%A8%E8%B7%A1%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "なし",
+    "closed_days": "なし",
+    "sources": [
+      "https://www.city.nonoichi.lg.jp/soshiki/9/2617.html"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "市の公式で所在地 本町2丁目・野々市工大前駅のすぐ横と確認。エリアを工大周辺に変更、説明の「布市神社境内」は削除。開園時間はなし（renya決定）"
+  },
+  {
+    "id": "spot_005",
+    "name": "学びの杜ののいち カレード（野々市市立図書館）",
+    "area": "市役所周辺",
+    "category": "facility",
+    "tags": [
+      "学び",
+      "休憩",
+      "落ち着く",
+      "学生向け"
+    ],
+    "short_description": "図書館と市民学習が融合した生涯学習施設",
+    "safe_reason_to_recommend": "学習や読書、休憩に幅広く使える落ち着いた場所である",
+    "card_description": "図書館機能と市民学習を融合した新しい生涯学習施設。夜遅くまで開館しており、多様な学習ニーズに対応する。併設のカフェも備える。読書や学習だけでなく、多様な市民活動や休憩の場として活用できる。",
+    "highlights": [
+      "図書館と学習施設が融合",
+      "多様な学習・創作スペース",
+      "併設カフェで休憩可能"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E5%AD%A6%E3%81%B3%E3%81%AE%E6%9D%9C%E3%81%AE%E3%81%AE%E3%81%84%E3%81%A1%20%E3%82%AB%E3%83%AC%E3%83%BC%E3%83%89%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "9:00-22:00",
+    "closed_days": "水曜、年末年始（12/29-1/3）、特別整理期間（図書館のみ）",
+    "sources": [
+      "https://www.kaleido-nono1.jp/"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "categoryをshop→facilityに変更（renya決定）。正式名称は「学びの杜ののいちカレード」なので名前の順を入れ替えた"
+  },
+  {
+    "id": "spot_006",
+    "name": "野々市中央公園",
+    "area": "市役所周辺",
+    "category": "park",
+    "tags": [
+      "散策",
+      "自然",
+      "遊び",
+      "休憩"
+    ],
+    "short_description": "市内最大の面積を誇る総合公園",
+    "safe_reason_to_recommend": "自然の中で体を動かしたり休んだりできる場所である",
+    "card_description": "市内で最大の面積を誇り、充実したスポーツ施設と自然景観を兼ね備えた総合公園。年齢に応じた多彩な複合遊具が整備されており、幅広い世代が活動的に遊べる。国際的に評価されたツバキの鑑賞施設も併設されている。",
+    "highlights": [
+      "充実したスポーツ施設と遊具",
+      "国際優秀つばき園に認定",
+      "幅広い世代が楽しめる"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E9%87%8E%E3%80%85%E5%B8%82%E4%B8%AD%E5%A4%AE%E5%85%AC%E5%9C%92%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "なし",
+    "closed_days": "なし",
+    "sources": [
+      "https://www.city.nonoichi.lg.jp/soshiki/31/13495.html",
+      "https://www.city.nonoichi.lg.jp/soshiki/31/23692.html"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "国際優秀つばき園は2020年3月認定（国内9園目・本州初）を確認。開園時間はなし（renya決定）"
+  },
+  {
+    "id": "spot_007",
+    "name": "Cafe38 野々市店（Sympa 野々市店併設）",
+    "area": "市役所周辺",
+    "category": "cafe",
+    "tags": [
+      "休憩",
+      "落ち着く",
+      "カフェ",
+      "スイーツ",
+      "食事"
+    ],
+    "short_description": "雑貨店に併設された隠れ家的なカフェ",
+    "safe_reason_to_recommend": "緑に囲まれた落ち着いた空間でひと息つける場所である",
+    "card_description": "ライフスタイルショップ「Sympa野々市店」に併設された隠れ家的なカフェスペース。雑貨や植物に囲まれた落ち着いた空間で、コーヒーやスイーツを楽しめる。緑が多くアンティーク調のインテリアが特徴。",
+    "highlights": [
+      "雑貨店併設のカフェ",
+      "落ち着いた隠れ家空間",
+      "緑とアンティーク調"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Cafe38%20%E9%87%8E%E3%80%85%E5%B8%82%E5%BA%97%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "11:00-17:00（L.O. 16:30）",
+    "closed_days": "月曜、臨時休業あり（Instagramで告知）",
+    "sources": [
+      "https://sympa.co.jp/shop/nonoichi/",
+      "https://www.instagram.com/cafe38_official/"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "店の公式ページの表記は「cafe 38 野々市店」。konon の名前は見つからなかったので外した"
+  },
+  {
+    "id": "spot_008",
+    "name": "Cafe toitoi",
+    "area": "工大周辺",
+    "category": "cafe",
+    "tags": [
+      "休憩",
+      "落ち着く",
+      "カフェ",
+      "スイーツ",
+      "学生向け",
+      "食事"
+    ],
+    "short_description": "住宅街に佇む木の温もりのある小さなカフェ",
+    "safe_reason_to_recommend": "一人でも入りやすく、疲れを癒やせる落ち着いた場所である",
+    "card_description": "住宅街に佇む、木の温もりと自然光が心地よい小さなカフェ。日替わりの具材が楽しめる手作りキッシュや本格的なスイーツが評判。一人でも入りやすく、日々の疲れを癒やすリラックスした時間を過ごせる。",
+    "highlights": [
+      "手作りの絶品キッシュ",
+      "こだわりの自家製スイーツ",
+      "一人でも落ち着ける空間"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=Cafe%20toitoi%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "11:00-18:00",
+    "closed_days": "月曜",
+    "sources": [
+      "https://www.weekend-kanazawa.com/entry/cafetoitoi"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "地域情報サイトの記事（2025-03）の情報。店の公式・Instagramで最新を確認できるとよい"
+  },
+  {
+    "id": "spot_009",
+    "name": "きっちん再来る（きっちんさいくる）",
+    "area": "工大周辺",
+    "category": "restaurant",
+    "tags": [
+      "休憩",
+      "食事",
+      "ガッツリ",
+      "学生向け",
+      "ランチ"
+    ],
+    "short_description": "工大隣の気取らないボリューム定食屋",
+    "safe_reason_to_recommend": "お腹いっぱい食べたいときに立ち寄りやすい店である",
+    "card_description": "金沢工業大学のすぐ隣に位置する、昔ながらの気取らない定食屋。フワフワ食感の肉厚なハンバーグをはじめ、多彩でボリューム満点のメニューが揃う。お腹いっぱい食べたい学生や地元住民の胃袋を支えている。",
+    "highlights": [
+      "ボリューム満点定食",
+      "1ポンドハンバーグが名物",
+      "実家のような居心地の良さ"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%81%8D%E3%81%A3%E3%81%A1%E3%82%93%E5%86%8D%E6%9D%A5%E3%82%8B%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "11:00-14:00 / 17:30-22:00",
+    "closed_days": "日曜、祝日",
+    "sources": [
+      "https://tabelog.com/en/ishikawa/A1702/A170203/17003185/"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "食べログの情報。1ポンドハンバーグ定食は食べログの写真で確認（撮影時期は不明）"
+  },
+  {
+    "id": "spot_010",
+    "name": "cafe Y's home",
+    "area": "工大周辺",
+    "category": "cafe",
+    "tags": [
+      "休憩",
+      "落ち着く",
+      "カフェ",
+      "自然",
+      "モーニング",
+      "食事"
+    ],
+    "short_description": "川沿いに佇むアットホームなカフェ",
+    "safe_reason_to_recommend": "川の景色を眺めながらゆったり過ごせる場所である",
+    "card_description": "川沿いに佇む、木と花に囲まれたアットホームなカフェ。モーニングの「厚切りクロックムッシュ」が特に人気。薪ストーブのある落ち着いた空間で、窓から川の景色を眺めながらゆったりとした時間を過ごせる。",
+    "highlights": [
+      "川沿いの隠れ家的な立地",
+      "厚切りクロックムッシュ",
+      "薪ストーブのある空間"
+    ],
+    "kind": "おすすめ",
+    "map_url": "https://www.google.com/maps/search/?api=1&query=cafe%20Y%27s%20home%20%E9%87%8E%E3%80%85%E5%B8%82",
+    "hours": "月-水 9:00-19:00 / 土日 9:00-18:00",
+    "closed_days": "木曜、金曜",
+    "sources": [
+      "Googleマップ（cafe Y's home）",
+      "https://retty.me/area/PRE17/ARE155/SUB54802/100001406161/",
+      "https://hide95.com/cafe-ys-home/"
+    ],
+    "checked_on": "2026-10-30",
+    "memo": "Googleマップの営業時間（renyaが2026-10-30に確認）。祝日は時間が変わることがある"
+  }
+]

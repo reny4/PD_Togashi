@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>富樫家通</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 背景（旧アプリ projectD から移植）: グラデーション・ざらつき・屏風の縦線・霧・家紋(巴)・光 -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg-byobu"></div>
+    <div class="bg-mist"></div>
+    <svg class="bg-mon" viewBox="0 0 200 200">
+      <defs>
+        <filter id="mon-blur"><feGaussianBlur stdDeviation="0.6"/></filter>
+      </defs>
+      <g fill="none" stroke="currentColor" stroke-width="0.8" filter="url(#mon-blur)">
+        <circle cx="100" cy="100" r="94"/>
+        <circle cx="100" cy="100" r="78" opacity="0.5"/>
+      </g>
+      <g fill="currentColor" opacity="0.9">
+        <path d="M100 28 C 140 28, 160 60, 140 94 C 122 82, 106 82, 100 100 C 100 70, 78 56, 100 28 Z"/>
+        <path d="M172 100 C 172 140, 140 160, 106 140 C 118 122, 118 106, 100 100 C 130 100, 144 78, 172 100 Z"/>
+        <path d="M100 172 C 60 172, 40 140, 60 106 C 78 118, 94 118, 100 100 C 100 130, 122 144, 100 172 Z"/>
+        <path d="M28 100 C 28 60, 60 40, 94 60 C 82 78, 82 94, 100 100 C 70 100, 56 122, 28 100 Z"/>
+        <circle cx="100" cy="100" r="10"/>
+      </g>
+    </svg>
+    <div class="bg-spot"></div>
+  </div>
+
+  <!-- 左上のタイトルとロゴ。右側に「おわる」 -->
+  <header class="header">
+    <div class="brand">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <circle cx="20" cy="20" r="14.5" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.6"/>
+        <text x="20" y="26" text-anchor="middle" font-size="16" fill="currentColor">家</text>
+      </svg>
+      <div class="brand-text">
+        <h1 class="title">富樫家通</h1>
+        <p class="subtitle">TOGASHI IEMICHI</p>
+      </div>
+    </div>
+    <div class="header-right">
+      <span id="turns-left" class="turns-left" hidden></span>
+      <button id="end-button" class="ghost-button" hidden>おわる</button>
+    </div>
+  </header>
+
+  <!-- 開始画面 -->
+  <section id="start-screen" class="start">
+    <p class="start-lead">野々市の地を治めた富樫の者と、少し話してゆかぬか。</p>
+    <button id="start-button" class="primary-button">はじめる</button>
+  </section>
+
+  <!-- 会話画面 -->
+  <main id="chat-screen" class="chat" hidden>
+    <div id="messages" class="messages" aria-live="polite"></div>
+  </main>
+
+  <footer id="chat-footer" class="footer" hidden>
+    <div class="menu-buttons">
+      <button class="menu-button" data-choice="spot">
+        <span class="menu-en">GUIDE</span><span class="menu-ja">おすすめを聞く</span>
+      </button>
+      <button class="menu-button" data-choice="history">
+        <span class="menu-en">HISTORY</span><span class="menu-ja">歴史を聞く</span>
+      </button>
+    </div>
+    <form id="input-form" class="input-row">
+      <input id="input-text" type="text" maxlength="100" placeholder="話しかける…" autocomplete="off">
+      <button type="submit" class="send-button">送る</button>
+    </form>
+  </footer>
+
+  <!-- スポットの詳しい説明（モーダル）。カードの「詳しく見る」で開く（会話は送らない）。中身（説明・写真）は後で入れる -->
+  <div id="spot-modal" class="modal-backdrop" hidden>
+    <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="spot-modal-title">
+      <h2 id="spot-modal-title" class="modal-title">スポット名</h2>
+      <div class="spot-detail">
+        <div class="spot-photo">写真（後で入れる）</div>
+        <div id="spot-modal-body" class="spot-text">
+          <!-- 家通のひと言（data/ietsugu_comments.json）。吹き出し全体を押すと、モーダルを閉じて会話で家通にもっと聞く -->
+          <div id="spot-modal-comment" class="spot-comment" hidden>
+            <div class="avatar">家</div>
+            <button type="button" id="spot-modal-ask" class="spot-comment-bubble">
+              <span id="spot-modal-comment-text" class="spot-comment-text"></span>
+              <span class="spot-comment-more">もっと聞く ›</span>
+            </button>
+          </div>
+          <p class="modal-note">詳しい説明（後で入れる）</p>
+        </div>
+      </div>
+      <div class="modal-actions">
+        <button type="button" id="spot-modal-close" class="ghost-button">閉じる</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 会話後アンケート（モーダル） -->
+  <div id="survey-modal" class="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="survey-title">
+      <div id="survey-form-area">
+        <h2 id="survey-title" class="modal-title">話してみて、どうであったか</h2>
+        <p class="modal-note">あてはまる数字を選んでください（5が「とてもそう思う」）。名前などは聞きません。</p>
+        <form id="survey-form">
+          <div id="survey-questions"></div>
+          <div class="modal-actions">
+            <button type="button" id="survey-skip" class="ghost-button">答えない</button>
+            <button type="submit" id="survey-submit" class="primary-button">送信する</button>
+          </div>
+        </form>
+      </div>
+      <div id="survey-thanks" hidden>
+        <h2 class="modal-title">かたじけない</h2>
+        <p class="modal-note">もっと詳しく答えてくれる人は、こちらのQRコードからどうぞ（任意）。</p>
+        <div class="qr-placeholder">QRコード<br>（長いアンケートのURLが決まったら置く）</div>
+        <div class="modal-actions">
+          <button type="button" id="restart-button" class="primary-button">最初に戻る</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
