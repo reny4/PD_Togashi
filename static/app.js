@@ -366,8 +366,9 @@ function openSpotModal(spot) {
   $("spot-modal-comment-text").textContent = spot.comment || "";
   $("spot-modal-comment").hidden = !spot.comment; // ひと言がまだないスポットでは出さない
 
-  $("spot-modal-desc").textContent = spot.description || "";
-  $("spot-modal-desc").hidden = !spot.description;
+  const desc = spot.detail || spot.description || ""; // 詳しい説明があればそちら、なければカード説明
+  $("spot-modal-desc").textContent = desc;
+  $("spot-modal-desc").hidden = !desc;
 
   const list = $("spot-modal-highlights");
   list.replaceChildren(...(spot.highlights || []).map((h) => {
