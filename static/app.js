@@ -356,12 +356,13 @@ function buildSurvey() {
 }
 
 // ---------- スポットの詳しい説明（モーダル） ----------
-// spots.json の既存項目（flow.card() が渡す）を出すだけ。AIは呼ばない（残り回数も減らない）。写真は Step 2 で入れる
+// spots.json の既存項目（flow.card() が渡す）を出すだけ。AIは呼ばない（残り回数も減らない）
 let modalSpot = null; // いまモーダルで開いているスポット（「もっと聞く」で使う）
 
 function openSpotModal(spot) {
   modalSpot = spot;
   $("spot-modal-title").textContent = spot.name;
+  showSpotPhoto(spot);
   $("spot-modal-comment-text").textContent = spot.comment || "";
   $("spot-modal-comment").hidden = !spot.comment; // ひと言がまだないスポットでは出さない
 
@@ -390,6 +391,19 @@ function openSpotModal(spot) {
   info.hidden = info.children.length === 0;
   $("spot-modal-body").scrollTop = 0;
   $("spot-modal").hidden = false;
+}
+
+// 写真がないスポット、読み込めなかった写真は家紋の代わり絵にする（壊れた画像アイコンを出さない）
+function showSpotPhoto(spot) {
+  const img = $("spot-modal-photo");
+  const fallback = () => { img.hidden = true; img.removeAttribute("src"); $("spot-modal-nophoto").hidden = false; };
+  if (!spot.photo) { fallback(); return; }
+  img.onerror = fallback;
+  img.onload = () => { $("spot-modal-nophoto").hidden = true; img.hidden = false; };
+  img.alt = spot.name;
+  img.hidden = true;
+  $("spot-modal-nophoto").hidden = false;
+  img.src = spot.photo;
 }
 
 function closeSpotModal() {
