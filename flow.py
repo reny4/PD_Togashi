@@ -67,6 +67,8 @@ def card(spot: dict) -> dict:
         # モーダル用（spots.json の既存項目をそのまま渡す。「なし」の出し分けは画面側）
         "area": spot.get("area", ""), "hours": spot.get("hours", ""), "closed_days": spot.get("closed_days", ""),
         "photo": photo_url(spot),
+        # モーダルではカード説明の代わりに出す長めの説明（同期元の detail_description。空ならカード説明を出す）
+        "detail": spot.get("detail_description", ""),
     }
 
 
