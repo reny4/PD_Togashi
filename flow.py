@@ -46,6 +46,18 @@ def is_known_choice(choice_id: str, spots_by_id: dict) -> bool:
     return choice_id.startswith("detail_") and choice_id[len("detail_"):] in spots_by_id
 
 
+_IMAGES_DIR = Path(__file__).parent / "static" / "images"
+
+
+def photo_url(spot: dict) -> str:
+    """spots.json の photo（ファイル名だけ。例 "spot_001.jpg"）を画面用のパスにする。
+    未設定・ファイルがない・ファイル名以外が書かれているときは ""（画面は家紋の代わり絵を出す）"""
+    name = (spot.get("photo") or "").strip()
+    if not name or Path(name).name != name or not (_IMAGES_DIR / name).is_file():
+        return ""
+    return f"images/{name}"
+
+
 def card(spot: dict) -> dict:
     return {
         "id": spot["id"], "name": spot["name"], "description": spot["card_description"],
@@ -54,6 +66,7 @@ def card(spot: dict) -> dict:
         "comment": SPOT_COMMENTS.get(spot["id"], ""),
         # モーダル用（spots.json の既存項目をそのまま渡す。「なし」の出し分けは画面側）
         "area": spot.get("area", ""), "hours": spot.get("hours", ""), "closed_days": spot.get("closed_days", ""),
+        "photo": photo_url(spot),
     }
 
 

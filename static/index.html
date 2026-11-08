@@ -77,12 +77,26 @@
     </form>
   </footer>
 
-  <!-- スポットの詳しい説明（モーダル）。カードの「詳しく見る」で開く（会話は送らない）。中身は flow.card() が渡す spots.json の項目（写真は Step 2 で入れる） -->
+  <!-- スポットの詳しい説明（モーダル）。カードの「詳しく見る」で開く（会話は送らない）。中身は flow.card() が渡す spots.json の項目 -->
   <div id="spot-modal" class="modal-backdrop" hidden>
     <div class="modal modal-wide" role="dialog" aria-modal="true" aria-labelledby="spot-modal-title">
       <h2 id="spot-modal-title" class="modal-title">スポット名</h2>
       <div class="spot-detail">
-        <div class="spot-photo">写真（後で入れる）</div>
+        <!-- 写真は static/images/<spots.json の photo>。ないスポットは家紋（巴）の代わり絵 -->
+        <div class="spot-photo">
+          <img id="spot-modal-photo" alt="" hidden>
+          <svg id="spot-modal-nophoto" class="spot-nophoto" viewBox="0 0 200 200" aria-hidden="true">
+            <circle cx="100" cy="100" r="94" fill="none" stroke="currentColor" stroke-width="1.2"/>
+            <circle cx="100" cy="100" r="78" fill="none" stroke="currentColor" stroke-width="0.8" opacity="0.5"/>
+            <g fill="currentColor">
+              <path d="M100 28 C 140 28, 160 60, 140 94 C 122 82, 106 82, 100 100 C 100 70, 78 56, 100 28 Z"/>
+              <path d="M172 100 C 172 140, 140 160, 106 140 C 118 122, 118 106, 100 100 C 130 100, 144 78, 172 100 Z"/>
+              <path d="M100 172 C 60 172, 40 140, 60 106 C 78 118, 94 118, 100 100 C 100 130, 122 144, 100 172 Z"/>
+              <path d="M28 100 C 28 60, 60 40, 94 60 C 82 78, 82 94, 100 100 C 70 100, 56 122, 28 100 Z"/>
+              <circle cx="100" cy="100" r="10"/>
+            </g>
+          </svg>
+        </div>
         <div id="spot-modal-body" class="spot-text">
           <!-- 家通のひと言（data/ietsugu_comments.json）。吹き出し全体を押すと、モーダルを閉じて会話で家通にもっと聞く -->
           <div id="spot-modal-comment" class="spot-comment" hidden>

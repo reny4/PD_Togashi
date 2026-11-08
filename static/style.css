@@ -360,11 +360,14 @@ button:disabled { opacity: 0.45; cursor: not-allowed; }
 }
 .spot-photo {
   display: grid; place-items: center;
-  border: 1px dashed var(--line);
+  min-height: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
-  color: var(--text-sub);
-  font-size: 14px;
+  color: var(--gold-dark);
 }
+.spot-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.spot-nophoto { width: 45%; max-width: 220px; height: auto; opacity: 0.55; }
 .spot-text { overflow-y: auto; }
 @media (max-width: 480px) {
   .modal.modal-wide { width: 100%; height: 80vh; padding: 18px; }
